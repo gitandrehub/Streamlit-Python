@@ -16,10 +16,11 @@ if __name__ == "__main__":
     )
     st.markdown("# :black[Sviluppo di un’applicazione web con Streamlit e MySQL 📕]")
     st.markdown(" ### :red[Introduzione]")
+    st.markdown("Ho sviluppato l'applicazione richiesta principalmente usando markdown per scrivere titoli, sottotitoli e messaggi; Per gli input invece sono stati utilizzati dei form (nelle due pagine conclusive), select box, slider e qualche box in cui l'utente deve scrivere.")
     st.markdown(" ### :red[Obiettivo]")
     st.markdown("Creare un’applicazione web in Python (Streamlit) in grado di interagire con un database MySQL in modo da eseguire interrogazioni in base alle interazioni dell’utente. ")
     st.markdown(" ### :blue[Studente]")
-    st.markdown("Andrea Cauda - 300505")
+    st.markdown("Andrea Cauda, Matricola 300505")
     
     if "connection" not in st.session_state.keys():
         st.session_state["connection"] = False

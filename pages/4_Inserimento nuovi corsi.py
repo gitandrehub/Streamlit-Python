@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from utils.utils import *
-import datetime
 
 if __name__ == "__main__":
     if check_connection():
