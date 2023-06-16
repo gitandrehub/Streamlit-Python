@@ -22,7 +22,7 @@ if __name__ == "__main__":
             query = f"SELECT Giorno AS 'day', OraInizio AS 'oraI', Durata AS 'dura'  FROM `corsi`, `programma` WHERE Tipo = '{option}' AND Livello = '{level}' AND corsi.CodC = programma.CodC "
             programmi = execute_query(st.session_state['connection'], query)
             with st.expander("Programmi disponibili", expanded=True):
-                st.markdown("### :blue[Programmi] disponibili")
+                st.markdown(f"### :blue[Programmi disponibili] di {option} al livello {level}")
                 for x in programmi:
                     col1, col2, col3 = st.columns(3)
                     day = x[0]
@@ -30,4 +30,4 @@ if __name__ == "__main__":
                     dura = x[2]
                     col1.metric('Giorno', day)
                     col2.metric('Ora di Inizio', oraI)
-                    col3.metric('Durata', dura)
+                    col3.metric('Durata (minuti)', dura)

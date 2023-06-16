@@ -11,7 +11,7 @@ if __name__ == "__main__":
         with col1:
             cognome = st.text_input("Digitare il cognome dell'istruttore", value='')
         with col2:
-            input = st.date_input("Selezionare la data", value=(datetime.date(2023, 1, 1), datetime.date(2023, 1, 15)))
+            input = st.date_input("Selezionare range date", value=(datetime.date(2023, 1, 1), datetime.date(2023, 1, 15)))
         
         query = f"SELECT COUNT(*) FROM istruttore WHERE Cognome = '{cognome}' AND DataNascita > '{input[0]}' AND DataNascita < '{input[1]}'"
         x = execute_query(st.session_state['connection'], query)
